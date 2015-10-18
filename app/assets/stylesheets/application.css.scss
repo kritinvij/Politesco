@@ -30,11 +30,40 @@ body {
 .item-row img {
 	height: 70px;
 	width: 100px;
-	float: left;
+	
+}
+
+.item-row-div {
+	height: 120px;
 }
 
 .item-row {
 	height: 100px;
-	width: 90%;
+	width: 800px;
 	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+.column {
+	float: left;
+
+	&.img {
+		width: 15%;
+	}
+
+	&.text {
+		width: 80%;
+	}
+}
+
+
+.title {
+	margin: 0px;
+	margin-top: 5px;
+	display: inline-block;
+}
+
+.desc {
+	font-size: small;
+	padding-bottom: 15px;
 }

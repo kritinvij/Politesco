@@ -2,12 +2,18 @@
 	<div class="row">
 		<div class="container-fluid">
 			<h1><%= link_to "Political Board", root_path %></h1>
-			<div>
+			<div class=item-row-div>
 				<% @all[0].each do |link| %>
 				  <div class="row item-row">
-				  	<img src="<%=link.thumbnail%>">
-				  	<span class="title"><%= link.title %></span>
-				  	<span class="desc"><%= link.description %></span>
+				  	<div class="column img">
+				  		<img src="<%=link.thumbnail%>">
+				  	</div>
+				  	<div class="column text">
+					  	<h4 class="title"><%= (link.title.length > 100) ? link.title[0...75] + "..." : link.title %></h4> <br>
+					  	<span class="desc">
+					  		<%= (link.description.length > 200) ? link.description[0...200] + "..." : link.description %>
+					  	</span>
+				  	</div>
 				  </div>
 				<% end -%>
 			</div>
