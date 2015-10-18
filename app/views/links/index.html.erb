@@ -1,0 +1,18 @@
+<div class="col-md-8 col-md-offset-2">
+	<div class="row">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h1><%= link_to "Political Board", root_path %></h1>
+			</div>
+			<div class="panel-body">
+				<% @all[0].each do |link| %>
+				  <ul class="list-unstyled">
+				  	<%= image_tag(link.thumbnail) %>
+				  	<li><%= link_to link.title, "http://www.reddit.com"+"#{link.permalink}" %></li>
+				  </ul>
+				<% end -%>
+			</div>
+		</div>
+	</div>
+</div>
+
