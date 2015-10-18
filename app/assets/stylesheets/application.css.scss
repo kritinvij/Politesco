@@ -27,6 +27,14 @@ body {
 	background: #E9E9E9;
 }
 
-li {
-	
+.item-row img {
+	height: 70px;
+	width: 100px;
+	float: left;
+}
+
+.item-row {
+	height: 100px;
+	width: 90%;
+	overflow: hidden;
 }

@@ -17,7 +17,11 @@ class LinksController < ApplicationController
 		    if (child['data']['link_flair_text'].downcase == "politics")
 		    	item = Item.where(:permalink => child['data']['permalink'])
 		    	if (item.blank?)
-		    		item = Item.create(:thumbnail => child['data']['thumbnail'], :permalink => child['data']['permalink'], :url => child['data']['url'], :title => child['data']['title'], :description => child['data']['selftext'])
+		    		img = child['data']['thumbnail']
+		    		if (img == "self")
+		    			img = "http://vignette3.wikia.nocookie.net/lego/images/a/ac/No-Image-Basic.png/revision/latest?cb=20130819001030"
+		    		end
+		    		item = Item.create(:thumbnail => img, :permalink => child['data']['permalink'], :url => child['data']['url'], :title => child['data']['title'], :description => child['data']['selftext'])
 				end		
 			end
 		end
