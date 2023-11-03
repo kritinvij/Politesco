@@ -15,7 +15,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'redditkit', '~> 1.0.1'
-gem 'httparty', '~> 0.13.7'
+gem 'httparty', '~> 0.21.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
